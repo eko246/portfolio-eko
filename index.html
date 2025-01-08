@@ -167,37 +167,44 @@
 
         <!-------------------------- Projects -------------------------->
     <section class="project-content" id="projects">
-        <div class="container">
-            <div class="project-title">
-                <h4>My Projects</h4>
-                <p>Beberapa projek yang telah saya buat</p>
+    <div class="container">
+        <div class="project-title">
+            <h4>My Projects</h4>
+            <p>Beberapa projek yang telah saya buat</p>
+        </div>
+        
+        <!-- Tambahkan filter buttons -->
+        <div class="project-filter">
+            <button class="filter-btn active" data-filter="all">Semua</button>
+            <button class="filter-btn" data-filter="web">Website</button>
+            <button class="filter-btn" data-filter="app">Aplikasi</button>
+            <button class="filter-btn" data-filter="cert">Sertifikat</button>
+        </div>
+
+        <div class="projects">
+            <!-- Modified project items with categories -->
+            <div class="project" data-category="web">
+                <i class="fa fa-coffee"></i>
+                <h4>Website Portofolio</h4>
+                <img src="files/web.jpg" alt="website portofolio">
+                <p>Membuat website mengenai Portofolio yang berisi seperti data diri, foto-foto, dan kegiatan lainnya.</p>
             </div>
-            <div class="projects">
-                <!-- 1st Project -->
-                <div class="project">
-                    <i class="fa fa-coffee"></i>
-                    <h4>Website Portofolio</h4>
-					<img src="files/web.jpg"</img>
-                    <p>Membuat website mengenai Portofolio yang berisi seperti data diri, foto-foto, dan kegiatan lainnya.</p>
-                </div>
-                 <!-- 2nd Project -->
-                 <div class="project">
-                    <i class="fa fa-car"></i>
-                    <h4>Membuat Kalkulator dan Game Tic Tac Toe</h4>
-					<img src="files/foto.jpg"</img>
-                  
-                </div>
-                <!-- 3rd Project -->
-                <div class="project">
-                    <i class="fa fa-desktop"></i>
-                    <h4>Sertifikat SoloLearn HTML</h4>
-					<img src="files/sertifikat.png"</img>
-                    <p>Belajar tentang HTML, CSS, and JavaScript.</p>
-                </div>
-                
+
+            <div class="project" data-category="app">
+                <i class="fa fa-car"></i>
+                <h4>Membuat Kalkulator dan Game Tic Tac Toe</h4>
+                <img src="files/foto.jpg" alt="aplikasi">
+            </div>
+
+            <div class="project" data-category="cert">
+                <i class="fa fa-desktop"></i>
+                <h4>Sertifikat SoloLearn HTML</h4>
+                <img src="files/sertifikat.png" alt="sertifikat">
+                <p>Belajar tentang HTML, CSS, and JavaScript.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
         <!-------------------------- Contact Me -------------------------->
 
@@ -245,4 +252,4 @@
    </footer>
 
 </body>
-			    </html>
+	</html>
