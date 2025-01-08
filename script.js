@@ -110,5 +110,49 @@ $(document).ready(function() {
     });
   }
   
-
- 
+// Project Filter Functionality
+$(document).ready(function() {
+    // Filter projects
+    $('.filter-btn').on('click', function() {
+        // Update active button
+        $('.filter-btn').removeClass('active');
+        $(this).addClass('active');
+        
+        const filterValue = $(this).attr('data-filter');
+        
+        if (filterValue === 'all') {
+            $('.project').removeClass('hide');
+            $('.project').fadeIn(500);
+        } else {
+            $('.project').each(function() {
+                if ($(this).attr('data-category') !== filterValue) {
+                    $(this).addClass('hide');
+                    $(this).fadeOut(500);
+                } else {
+                    $(this).removeClass('hide');
+                    $(this).fadeIn(500);
+                }
+            });
+        }
+        
+        // Trigger ScrollReveal after filtering
+        ScrollReveal().reveal(".project:not(.hide)", {
+            origin: "bottom",
+            distance: "50px",
+            duration: 1000,
+            delay: 200
+        });
+    });
+    
+    // Initialize ScrollReveal for projects
+    ScrollReveal().reveal(".project", {
+        origin: "bottom",
+        distance: "50px",
+        duration: 1000,
+        delay: 200
+    });
+    
+    // Add smooth transition when showing/hiding projects
+    $('.project').css('transition', 'all 0.4s ease');
+});
+  
