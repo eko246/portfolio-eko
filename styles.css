@@ -424,6 +424,24 @@ profile-photo .img{
   display: block;
 }
 
+.map-container {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-container h4 {
+    font-size: 24px;
+    color: #fed700;
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
 
 
 
@@ -530,6 +548,14 @@ profile-photo .img{
     flex-basis: 100%;
     margin-bottom: 30px;
   }
-
+@media only screen and (max-width:767px){
+    .map-container {
+        max-width: 350px;
+    }
+    
+    .map-container iframe {
+        height: 300px;
+    }
+}
 }
 
