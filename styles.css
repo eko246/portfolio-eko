@@ -216,6 +216,7 @@ profile-photo .img{
 
 /*---------------------------Button---------------------------*/
 
+
 .btn-group{
   margin: 45px 0;
 }
@@ -234,6 +235,63 @@ profile-photo .img{
   border-color: #fed700;
 }
 
+.project-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 8px 20px;
+    border: 2px solid #e5e5e5;
+    background: transparent;
+    color: #e5e5e5;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.filter-btn:hover {
+    border-color: #fed700;
+    color: #fed700;
+}
+
+.filter-btn.active {
+    background: #fed700;
+    border-color: #fed700;
+    color: #202020;
+}
+
+/* Add animation for projects */
+.project {
+    transition: all 0.4s ease;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.project.hide {
+    transform: scale(0.8);
+    opacity: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Responsive design for filter buttons */
+@media only screen and (max-width: 767px) {
+    .project-filter {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+}
 
 /*---------------------------Education & Internship---------------------------*/
 
@@ -558,4 +616,3 @@ profile-photo .img{
     }
 }
 }
-
